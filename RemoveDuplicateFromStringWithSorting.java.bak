@@ -1,0 +1,16 @@
+class RemoveDuplicateFromStringWithSorting 
+{
+	public static void main(String[] args) 
+	{
+		sb1=abc;
+        sb2=mnoap;
+      	for (int i=0;i<sb1.length() ;i++ )
+		{
+			if(sb2.indexof""+(sb1.charAt(i))>=0)
+			{
+				sb2.deletecharAt(( sb2.indexof""+sb1.charAt(i));
+				i=-1;
+		}
+		
+	}
+}
