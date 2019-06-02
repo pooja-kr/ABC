@@ -1,0 +1,117 @@
+class Brain 
+{
+	String colour;
+	int size;
+	public Brain(String colour,int size)
+	{
+		this.colour=colour;
+		this.size=size;
+	}
+	public String getColour()
+	{
+		return colour;
+	}
+	public int getSize()
+	{
+		return size;
+	}
+}
+class Heart
+{
+	int size;
+	int hbm;
+	public Heart(int size,int hbm)
+	{
+		this.size=size;
+		this.hbm=hbm;
+	}
+	public int getSize()
+	{
+		return size;
+	}
+	public int getHbm()
+	{
+		return hbm;
+	}
+	
+}
+class Book
+{
+	String author;
+	float price;
+	public Book(String author,float price)
+	{
+		this.author=author;
+		this.price=price;
+	}
+	public String getAuthor()
+	{
+		return author;
+	}
+	public float getPrice()
+	{
+		return price;
+	}
+}
+class Bike
+{
+	String brand;
+	float mileage;
+	public Bike(String brand,float mileage)
+	{
+		this.brand=brand;
+		this.mileage=mileage;
+	}
+	public String getBrand()
+	{
+		return brand;
+	}
+	public float getMileage()
+	{
+		return mileage;
+	}
+}
+class Student
+{
+	Brain br=new Brain("Grey",300);
+	Heart ht=new Heart(100,67);
+	public void hasA(Book bo)
+	{
+		System.out.println(bo.getAuthor());
+		System.out.println(bo.getPrice());
+	}
+    public void hasA(Bike bi)
+    {
+	    System.out.println(bi.getBrand());
+		System.out.println(bi.getMileage());
+    }
+}
+class Task
+{
+	public static void main(String args[])
+	{
+		System.out.println("Aggregation0-Direct access");
+		Book bo=new Book("Mohula",220.50f);
+		System.out.println(bo.getauthor());
+		System.out.println(bo.getprice());
+		System.out.println();
+		Bike bi=new Bike("Honda",300000.500f);
+		System.out.println(bi.getbrand());
+		System.out.println(bi.getmileage());
+		System.out.println();
+		System.out.println("Aggregation through Student");
+		Student st=new Student();
+		st.hasA(bo);
+		st.hasA(bi);
+		System.out.println("Composition through Student");
+		System.out.println(st.br.getcolour());
+		System.out.println(st.br.getsize());
+        System.out.println(st.ht.getsize());
+        System.out.println(st.ht.gethbm());
+	}
+}
+        
+
+
+	
+	
